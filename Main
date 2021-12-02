@@ -1,0 +1,28 @@
+public class Main {
+
+    public static void main(String[] args) {
+        
+      
+        Hamburger hamburger = new Hamburger("Basic", "Sausage", 3.14, "White");
+        double price = hamburger.itemizeHamburger();
+        System.out.println(price);
+        hamburger.addHamburgerAddition1("Tomato", 0.27);
+        hamburger.addHamburgerAddition2("Lettuce", 0.75);
+        hamburger.addHamburgerAddition3("Cheese", 1.13);
+        System.out.println("Total burger price is " + hamburger.itemizeHamburger());
+        System.out.println("****************************************");
+
+        HealthyBurger healthyBurger = new HealthyBurger("Bacon", 5.56);
+        healthyBurger.addHamburgerAddition1("Egg", 0.4);
+        healthyBurger.itemizeHamburger();
+        healthyBurger.addHealthAddition1("Pickles", 0.5);
+        System.out.println("Total Healthy Burger price is "
+                + healthyBurger.itemizeHamburger());
+        System.out.println("****************************************");
+
+        DeluxeBurger db = new DeluxeBurger();
+        db.addHamburgerAddition3("Should not exist", 100);
+        db.itemizeHamburger();
+
+    }
+}
